@@ -15,6 +15,8 @@ function MyState01() {
 
     function plus(){
         setNum(num+1)
+        //num의 값을 바꿔서 다시 출력할꺼다 -->재렌더링
+        //-->해당 컴포넌트를 다시 실행 시킬꺼다
         console.log(num) //변경후 값이 아닌 이전 값
         //setState의 특징: 클로저 함수다(제일 마지막에 실행)
     }
