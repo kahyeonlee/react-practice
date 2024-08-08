@@ -15,7 +15,7 @@ const MyRef01 = () => {
         //e.target :이벤트를 발생시킨 주체(태그)
         //방식1. document.getElemnetById('myText).value --> 권장하는 방식이 아님
         //방식2. setInputText(inputText2)
-        //방식2. setInputText(e.target.value)
+        //       setInputText(e.target.value)
         
         //inputRef.current : 현재 가르키는 태그 객체, 태그를 객체로 변환
         setInputText(inputRef.current.value)

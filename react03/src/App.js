@@ -5,6 +5,7 @@ import MyState02 from './component/MyState02';
 import MyState03 from './component/MyState03';
 import MyRef01 from './component/MyRef01';
 import MyRef02 from './component/MyRef02';
+import MyFinal from './component/MyFinal';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
      {/* <MyState02></MyState02> */}
      {/* <MyState03></MyState03> */}
       {/* <MyRef01></MyRef01> */}
-      <MyRef02></MyRef02>
+      {/* <MyRef02></MyRef02> */}
+      <MyFinal></MyFinal>
     </div>
   );
 }
