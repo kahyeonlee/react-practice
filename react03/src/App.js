@@ -7,6 +7,8 @@ import MyRef01 from './component/MyRef01';
 import MyRef02 from './component/MyRef02';
 import MyFinal from './component/MyFinal';
 import MyMap from './component/MyMap';
+import MyMap02 from './component/MyMap02';
+import MyToDo from './component/MyToDo';
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
       {/* <MyRef01></MyRef01> */}
       {/* <MyRef02></MyRef02> */}
       {/* <MyFinal></MyFinal> */}
-      <MyMap></MyMap>
+      {/* <MyMap></MyMap> */}
+      {/* <MyMap02></MyMap02> */}
+      <MyToDo></MyToDo>
     </div>
   );
 }

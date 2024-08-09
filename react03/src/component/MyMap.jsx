@@ -14,7 +14,7 @@ function MyMap() {
              map사용 - 데이터의 크기를 모를때 사용
              data : 배열이 가지고 있는 요소가 순차적으로 들어옴
              index : 배열 인덱스 값이 순차적으로 들어옴
-
+             콜백함수 : 함수 안에서 다른 함수가 호출되어 실행 되어지는 함수
             */}
             {menu.map((data,index)=><li key={index}>{data}</li>)}
 
@@ -26,10 +26,10 @@ function MyMap() {
             <li>{menu[3]}</li> 
             */}
 
-
             <hr></hr>
             {/* menu 배열중 탕수육을 제외한 나머지만 출력 */}
-            {menu.filter((data)=>data!="탕수육").map((data,index)=><li key={index}>{data}</li>)}
+            {menu.filter((data)=>data!="탕수육")
+            .map((data,index)=><li key={index}>{data}</li>)}
 
         </ul>
 
