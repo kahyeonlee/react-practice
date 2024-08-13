@@ -1,8 +1,4 @@
-import React,{useState,useRef} from 'react'
-
-//전역변수
-let com = 0;
-let user = 0;
+import React,{useState,useRef,useEffect} from 'react'
 
 function MyFinal() {
     //1.start 버튼을 클릭했을때 ,
@@ -21,6 +17,7 @@ function MyFinal() {
     const[comScore,setComScore]=useState(0);
     const[userScore,setUserScore]=useState(0);
     const[result,setResult]=useState(0);
+    const[num,setNum]=useState(0);
 
     function randomNum(){
         return Math.floor(Math.random()*6+1);
@@ -30,35 +27,46 @@ function MyFinal() {
         setComScore(0);
         setUserScore(0);
         setResult('');
+        setNum(0);
     }
-
+    
     function randomDice(){
-        let comRandomNum=randomNum();
-        let userRandomNum=randomNum();
+      let comRandomNum=randomNum();
+      let userRandomNum=randomNum();
 
         //주사위 랜덤 출력
        comImgRef.current.src = './img/dice'+comRandomNum+'.png';
        userImgRef.current.src = './img/dice'+userRandomNum+'.png';
 
-       //comScore와 UserScore 결과(주사위 비교), 결과출력
+       // comScore와 UserScore 결과(주사위 비교), 결과출력
        if(comRandomNum>userRandomNum){
-        com++; //comScore는 클로징함수니깐 com==10이면 com WIN 출력
         setComScore(comScore+1);
-        if(comScore==9) {
-            setResult('com WIN');
-        }
+        setNum(num+1);
        } else if(comRandomNum<userRandomNum){
-        user++; //userScore는 클로징함수니깐 user==10이면 user WIN 출력
         setUserScore(userScore+1);
-        if(userScore==9){
-            setResult('user WIN');
-        }
+        setNum(num+1);
+      }else{
+        setNum(num+1);
+      }
     }
-}
+
+    useEffect(()=>{
+      console.log("useEffect");
+      if(userScore==10){
+        setResult("USER WIN")
+      } else if(comScore == 10){
+        setResult("COM WIN")
+      }
+    },[comScore,userScore])
+  
+    // []- dependency array (의존 배열)
+    // [] 빈 배열일때는 componnentDIdMount처럼 사용
+    // componnentDidUpdate 처럼은 사용 x  -> if 함수 로직으로 우회적으로만 가능
 
   return (
     <div>
       <h1>DICE GAME</h1>
+      <p>클릭수 : {num}</p>
       <button onClick={randomDice}>Start</button>
       <button onClick={reset}>Reset</button>
 

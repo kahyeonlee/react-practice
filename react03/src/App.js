@@ -9,6 +9,8 @@ import MyFinal from './component/MyFinal';
 import MyMap from './component/MyMap';
 import MyMap02 from './component/MyMap02';
 import MyToDo from './component/MyToDo';
+import MyClass from './component/MyClass';
+
 
 function App() {
   return (
@@ -18,10 +20,11 @@ function App() {
       {/* <MyState03></MyState03> */}
       {/* <MyRef01></MyRef01> */}
       {/* <MyRef02></MyRef02> */}
-      {/* <MyFinal></MyFinal> */}
+      <MyFinal></MyFinal>
       {/* <MyMap></MyMap> */}
       {/* <MyMap02></MyMap02> */}
-      <MyToDo></MyToDo>
+      {/* <MyToDo></MyToDo> */}
+      {/* <MyClass></MyClass> */}
     </div>
   );
 }
