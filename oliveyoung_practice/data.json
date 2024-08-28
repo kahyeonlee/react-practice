@@ -1,0 +1,145 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0021/A00000021066105ko.jpg?l=ko",
+        "prd_brand": "브링그린",
+        "prd_name": "[재유마켓]브링그린 징크테카트러블세럼 50mL기획/티트리시카트러블수딩토너패드 90매+90매 리필 기획",
+        "prd_price": "29,800",
+        "prd_flag": ["세일", "증정", "오늘드림"],
+        "prd_options": [
+          { "prd_name": "징크테카트러블세럼50ML", "prd_price": "29,800" },
+          { "prd_name": "토너패드 90매(+90매 리필기획", "prd_price": "17,640" }
+        ]
+      },
+      {
+        "id": 2,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0016/A00000016065939ko.jpg?l=ko",
+        "prd_brand": "메디힐",
+        "prd_name": "[6년연속1위]메디힐 에센셜 마스크팩 1매 6종 택1",
+        "prd_price": "1,000",
+        "prd_flag": ["세일", "증정", "오늘드림"],
+        "prd_options": [
+          { "prd_name": "히알루론산1매", "prd_price": "1,000" },
+          { "prd_name": "마데카소사이드1매", "prd_price": "1,000" },
+          { "prd_name": "티트리1매", "prd_price": "2,000" },
+          { "prd_name": "콜라겐1매", "prd_price": "2,000" }
+        ]
+      },
+      {
+        "id": 3,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020802011ko.jpg?l=ko",
+        "prd_brand": "구달",
+        "prd_name": "[구달X먼작귀][리필기획] 구달 청귤 비타C 잡티케어 세럼 50ml 콜라보기획 (50ml+50ml리필+파우치)",
+        "prd_price": "30,400",
+        "prd_flag": ["세일", "쿠폰", "증정", "오늘드림"],
+        "prd_options": []
+      },
+      {
+        "id": 4,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0019/A00000019256838ko.jpg?l=ko",
+        "prd_brand": "일소",
+        "prd_name": "[8월 올영픽/피지클리너] 일소 슈퍼 멜팅 세범 소프트너 150ml 기획 (+솜 40매 증정)",
+        "prd_price": "17,900",
+        "prd_flag": ["세일", "오늘드림"],
+        "prd_options": [
+          { "prd_name": "소프트너150ml기획(+화장솜40매)", "prd_price": "17,900" },
+          {
+            "prd_name": "[짝꿍추천]블랙헤드제거기+압출면봉기획",
+            "prd_price": "7,130"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0013/A00000013031960ko.jpg?l=ko",
+        "prd_brand": "바이오더마",
+        "prd_name": "[올리브영 단독]센시비오 H2O 850ml(클렌징 워터)",
+        "prd_price": "23,630",
+        "prd_flag": ["세일", "쿠폰", "증정", "오늘드림"],
+        "prd_options": []
+      },
+      {
+        "id": 6,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0017/A00000017142654ko.jpg?l=ko",
+        "prd_brand": "메디힐",
+        "prd_name": "[35관왕] 메디힐 네모 패드 100매 7종 택 1",
+        "prd_price": "17,010",
+        "prd_flag": ["세일", "쿠폰", "증정", "오늘드림"],
+        "prd_options": [
+          { "prd_name": "마데카소사이드100매", "prd_price": "17,010" },
+          { "prd_name": "티트리100매", "prd_price": "17,010" },
+          { "prd_name": "레티놀콜라겐100매", "prd_price": "17,900" },
+          { "prd_name": "콜라겐100매", "prd_price": "26,000" }
+        ]
+      },
+      {
+        "id": 7,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0018/A00000018926120ko.jpg?l=ko",
+        "prd_brand": "토리든",
+        "prd_name": "[8월 올영픽/단독기획] 토리든 다이브인 저분자 히알루론산 세럼 50ml 리필기획(+리필팩 50ml)",
+        "prd_price": "23,750",
+        "prd_flag": ["세일", "쿠폰", "증정", "오늘드림"],
+        "prd_options": []
+      },
+      {
+        "id": 8,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020734911ko.jpg?l=ko",
+        "prd_brand": "오프라 코스메틱",
+        "prd_name": "[백송민PICK] 오프라 코스메틱 미니 하이라이터 3g 8종 택 1",
+        "prd_price": "28,000",
+        "prd_flag": ["세일", "쿠폰", "오늘드림"],
+        "prd_options": [
+          { "prd_name": "클라우드9", "prd_price": "28,000" },
+          { "prd_name": "슈가쿠키", "prd_price": "28,000" },
+          { "prd_name": "서울", "prd_price": "28,000" },
+          { "prd_name": "필로우 토크", "prd_price": "28,000" }
+        ]
+      },
+      {
+        "id": 9,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0018/A00000018434822ko.jpg?l=ko",
+        "prd_brand": "바이오던스",
+        "prd_name": "[원조겔팩] 바이오던스 바이오 콜라겐 리얼 딥 마스크 16매",
+        "prd_price": "62,900",
+        "prd_flag": ["세일", "쿠폰", "증정", "오늘드림"],
+        "prd_options": []
+      },
+      {
+        "id": 10,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0016/A00000016203542ko.jpg?l=ko",
+        "prd_brand": "웰라쥬",
+        "prd_name": "[단독/더블기획] 웰라쥬 리얼 히알루로닉 블루 100 앰플 75ml 1+1 기획",
+        "prd_price": "29,000",
+        "prd_flag": ["세일", "쿠폰", "오늘드림"],
+        "prd_options": []
+      },
+      {
+        "id": 11,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0017/A00000017142369ko.jpg?l=ko",
+        "prd_brand": "어노브",
+        "prd_name": "[헤어케어 1위] 어노브 대용량 딥 데미지 트리트먼트 EX 더블/듀오 기획 4종 택1(텐더블룸/웜페탈)",
+        "prd_price": "29,800",
+        "prd_flag": ["세일", "오늘드림"],
+        "prd_options": [
+          { "prd_name": "더블기획 텐더블룸 향", "prd_price": "29,800" },
+          { "prd_name": "더블기획 웜페탈 향", "prd_price": "29,800" },
+          {
+            "prd_name": "듀오기획 텐더블룸향+웜페탈향+미러키링",
+            "prd_price": "42,000"
+          },
+          { "prd_name": "듀오기획 텐더블룸향+웜페탈향", "prd_price": "42,000" }
+        ]
+      },
+      {
+        "id": 12,
+        "prd_img": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020802205ko.jpg?l=ko",
+        "prd_brand": "구달",
+        "prd_name": "[구달X먼작귀][리필기획] 구달 청귤 비타C 잡티케어 패드 콜라보기획 (70매+70매리필+휴대용케이스)",
+        "prd_price": "25,400",
+        "prd_flag": ["세일", "쿠폰", "오늘드림"],
+        "prd_options": [{ "prd_name": "", "prd_price": "" }]
+      }
+    ]
+  }
+  

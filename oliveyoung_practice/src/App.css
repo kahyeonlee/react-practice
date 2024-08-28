@@ -1,0 +1,95 @@
+/* Navbars.jsx */
+.nav_divider {
+  --bs-breadcrumb-divider: '|';
+  font-size: 12px;
+  margin-top: 10px;
+}
+.nav_divider > ol {
+  justify-content: end;
+}
+
+.nav_divider a {
+  color: #383737;
+  text-decoration: none;
+}
+
+.nav_logo_img {
+  width: 240px;
+  height: 40px;
+}
+
+.search_box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 360px;
+  height: 40px;
+  border: 1px solid #82dc28;
+  border-radius: 20px;
+}
+
+.search_input {
+  width: 270px;
+  height: 38px;
+  border: 0;
+  background-color: transparent;
+  color: #131518;
+  caret-color: #82dc28;
+}
+
+.menu_list {
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.menu_list a {
+  font-weight: 700;
+  color: black;
+}
+
+/* ProductAll.jsx */
+.card {
+  width: 18rem;
+  height: 503px;
+  border: 0;
+  text-align: center;
+}
+
+.card_title {
+  font-size: 14px;
+}
+
+/* 
+    -webkit-line-clamp속성
+    1.블록 컨테이너의 컨텐츠를 지정한 줄 수만큼 제한할 수 있는 속성
+    2.display속성이 -webkit-box or -webkit-inline-box일 때 동작
+    3.-webkit-box-orient속성값이 vertical일 때 동작
+    4.overflow:hidden 과 함께 사용해야 컨텐츠 박스를 넘어가는 텍스트를 감출 수 있음
+*/
+
+.card_prd_name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /*글자의 흐름을 변경하는 속성(가로/세로)*/
+  -webkit-line-clamp: 2; /*블록 컨테이너의 컨텐츠를 지정한 줄 수만큼으로 제한하는 속성*/
+  word-break: 'keep-all'; /*텍스트가 컨텐츠 박스 밖으로 나갔을 때 줄을 바꿀 지 지정하는 속성*/
+  overflow: 'hidden'; /*컨텐츠 박스 바깥으로 나갔을 때 어떻게 보여줄지 지정하는 속성*/
+  font-size: 14px;
+  text-align: 'center';
+}
+
+.card_text {
+  color: #e02020;
+  font-size: 20px;
+}
+
+.prd_flag {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 17px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  height: 18px;
+  border-radius: 9px;
+}

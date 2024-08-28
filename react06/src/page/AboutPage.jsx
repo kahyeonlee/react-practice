@@ -6,7 +6,6 @@ const AboutPage = () => {
     <div>
         <h1>AboutPage</h1>
         <Link to={'/'}>Home으로 이동</Link>
-
     </div>
   )
 }
