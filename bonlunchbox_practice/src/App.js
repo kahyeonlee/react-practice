@@ -6,6 +6,8 @@ import GoodList from "./page/GoodList";
 import GoodDetail from "./page/GoodDetail";
 import Header from "./component/Header"
 import Footer from "./component/Footer"
+import { useState } from 'react';
+import PriviateRouter from './page/PriviateRouter';
 
 /**
  *  실습1) page폴더 내 4개의 페이지를 생성하시오
@@ -26,14 +28,23 @@ import Footer from "./component/Footer"
  */
 
 function App() {
+
+  // 로그인 상태를 보관하는 state
+  const [auth, setAuth] = useState(false);
+
   return (
     <div>
-      <Header />
+      {/* 
+      실습 ) auth, setAuth를 헤더영역에 전달하여 로그인상태에 따라 로그인/ 로그아웃이 출력되도록 구현하시오.
+        - 로그인이 아닌 상태에서 '로그인'버튼 클릭 -> 로그인 페이지로 이동
+        - '로그아웃' 버튼 클릭 -> auth값을 false로 변경한 후 메인페이지로 이동
+      */}
+      <Header auth={auth} setAuth={setAuth}/>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setAuth={setAuth} />} />
         <Route path="/menulist" element={<GoodList />} />
-        <Route path="/menulist/:id" element={<GoodDetail />} />
+        <Route path="/menulist/:id" element={<PriviateRouter auth={auth}/>} />
       </Routes>
       <Footer />
     </div>

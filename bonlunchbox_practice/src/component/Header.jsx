@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState } from 'react'
 import { useNavigate,Link } from 'react-router-dom'
 
 /**
@@ -8,12 +8,17 @@ import { useNavigate,Link } from 'react-router-dom'
  *  - 로그인 클리 -> 로그인페이지로 이동
  */
 
-const Header = () => {
+const Header = ({auth, setAuth}) => {
 
   const navigate  = useNavigate();
 
   const goToLogin = ()=>{
-    navigate('/login');
+    if(auth==false){
+      navigate('/login');
+    } else{
+      setAuth(false);
+      navigate('/');
+    }
   }
 
   return (
@@ -33,7 +38,7 @@ const Header = () => {
         </ol>
       </div>
       <div className='header-box-util'>
-        <button onClick={goToLogin}>로그인</button>
+        <button onClick={goToLogin}>{auth?"로그아웃":"로그인"}</button>
       </div>
     </div>
   )
