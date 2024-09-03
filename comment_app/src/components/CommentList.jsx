@@ -17,14 +17,19 @@ const CommentList = () => {
     const [filter,setFilter] =useState([]);
 
     useEffect(()=>{
-
+      if(keyword===''){
+        setFilter(commentList);
+      }else{
+        let list = commentList.filter((item)=>item.content.includes(keyword))
+        setFilter(list);
+      }
     },[commentList,keyword])
 
     return (
     <div>
         <div> 댓글수 : 0 </div>
         <hr/>
-        {commentList.map((item)=>(
+        {filter.map((item)=>(
           <CommnetItem key={item?.id} content={item?.content} writer={item?.writer}/>
           ))}
         
