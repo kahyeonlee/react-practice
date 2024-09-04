@@ -1,0 +1,18 @@
+.header-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+  }
+
+  .nav-itme{
+    display: flex; 
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+  }
