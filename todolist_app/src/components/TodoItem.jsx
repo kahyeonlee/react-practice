@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-// import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 import { FaRegCircle } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
-import { textChangeTodo } from '../redux/reducers/TodoSlice';
+import { checkChangeTodo, deleteTodo, textChangeTodo } from '../redux/reducers/TodoSlice';
 
 const TodoItem = ({todo}) => {
 
@@ -28,10 +28,29 @@ const TodoItem = ({todo}) => {
     setEdit(false);
   }
 
+  const handleChange =()=>{
+    dispatch(checkChangeTodo({
+      id : todo.id
+    }))
+  }
+
+  const handleDelete=()=>{
+    dispatch(deleteTodo({id:todo.id}))
+  }
+
   return (
     <li className='todo-item'>
-      {/* <FaCheckCircle className='todo-item-checkbox' />  */}
-      <FaRegCircle className='todo-item-checkbox' style={{color:'lightgray'}} />
+      {/*
+       실습) check 상태에 따라 icon 구분하기 
+       hint) 매개변수로 넘겨받는 todo 활용
+       */}
+       {todo.complete?
+       <FaCheckCircle className='todo-item-checkbox' onClick={handleChange}/>
+       :
+       <FaRegCircle className='todo-item-checkbox' style={{color:'lightgray'}} onClick={handleChange}/>
+      }
+      
+      
       {edit?
         <div>
           <input 
@@ -44,13 +63,14 @@ const TodoItem = ({todo}) => {
         </div>
         :
         <div>
-          <span className='todo-item-content'>{todo.text}</span>
-          <button className='todo-item-edit-btn' onClick={handleEdit}>🖌️</button>
+          <span className={`todo-item-content & ${todo.complete?'todo-item-content-checked':''}`}>{todo.text}</span>
+          {/* 실습) 완료상태일 경우 수정버튼이 보여지지않도록 구현해보기! */}
+          {todo.complete?'':<button className='todo-item-edit-btn' onClick={handleEdit}>🖌️</button>}
         </div>
       }
       
       
-      <button className='todo-item-delete-btn'>🗑️</button>
+      <button className='todo-item-delete-btn' onClick={handleDelete}>🗑️</button>
     </li>
   )
 }
