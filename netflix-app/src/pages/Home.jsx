@@ -7,7 +7,7 @@ import MovieSlide from "../components/MovieSlide";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const popularMovies = useSelector(state =>state.movie.popularMovies)
+  const {popularMovies,topRatedMovies,upcomingMovies} = useSelector(state =>state.movie)
   
   const getMovieData = async (key) => {
     const API_URL = `/movie/${key}?language=ko-KR&page=1`;
@@ -15,17 +15,25 @@ const Home = () => {
     return res.data;
   };
 
+  const getGenreData= async() =>{
+    const GENRE_URL = '/genre/movie/list?language=ko'
+    const res = await api.get(GENRE_URL);
+    return res.data
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       const popular = await getMovieData("popular");
       const topRated = await getMovieData("top_rated");
       const upcoming = await getMovieData("upcoming");
+      const genre = await getGenreData();
 
       dispatch(
         MovieActions.initData({
           popular,
           topRated,
           upcoming,
+          genre
         })
       );
     };
@@ -35,9 +43,15 @@ const Home = () => {
 
   
   return (
-    <div>
-      <Banner movie={popularMovies!=""?popularMovies.results[0]:""}/>
-      <MovieSlide movie={popularMovies}/>
+    <div style={{backgroundColor:'black'}}>
+      {popularMovies && popularMovies.results && popularMovies.results.length > 0 ? (
+        <>
+          <Banner movie={popularMovies.results[0]} />
+          <MovieSlide popular={popularMovies.results} top={topRatedMovies.results} upcoming={upcomingMovies.results} />
+        </>
+      ) : (
+        <div>영화 데이터가 없습니다.</div> // 데이터가 없을 때 보여줄 메시지
+      )}
     </div>
   );
 };

@@ -5,13 +5,15 @@ const movieSlice = createSlice({
     initialState:{
         popularMovies:[],
         topRatedMovies:[],
-        upcomingMovies:[]
+        upcomingMovies:[],
+        genreList:[]
     },
     reducers:{
         initData:(state,action)=>{
             state.popularMovies = action.payload.popular;
             state.topRatedMovies = action.payload.topRated;
             state.upcomingMovies = action.payload.upcoming;
+            state.genreList =action.payload.genre
         }
     }
 })

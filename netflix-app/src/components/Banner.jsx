@@ -1,27 +1,27 @@
 import React from "react";
 
 const Banner = ({ movie }) => {
-  console.log(movie);
   return (
     <div
       style={{
         backgroundImage: `url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${movie.poster_path})`,
-        height: "100vh",
+        height: "50vh",
         width: "100vw",
         color: "white",
         backgroundSize: "cover",
+        backgroundPosition: "center", // 배경 이미지 중앙 정렬
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        flexDirection: "column", // 세로 방향으로 배치
+        flexDirection: "column",
+        margin: 0, // 마진 제거
+        padding: 0, // 패딩 제거
       }}
     >
-      <div style={{textAlign:'left' ,padding:'20px', borderRadius: '10px'}}>
-        <h1>{movie.title}</h1>
-
+      <div style={{ textAlign: 'left', padding: '20px', borderRadius: '10px', backgroundColor: 'rgba(0, 0, 0, 0.1)' }}>
+        <h3>{movie.title}</h3>
         <br />
-
-        <h4>{movie.overview}</h4>
+        <h6>{movie.overview}</h6>
       </div>
     </div>
   );
