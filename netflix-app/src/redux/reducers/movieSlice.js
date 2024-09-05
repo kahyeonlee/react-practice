@@ -9,9 +9,9 @@ const movieSlice = createSlice({
     },
     reducers:{
         initData:(state,action)=>{
-            state.popularMovies={}
-            state.topRatedMovies={}
-            state.upcomingMovies={}
+            state.popularMovies = action.payload.popular;
+            state.topRatedMovies = action.payload.topRated;
+            state.upcomingMovies = action.payload.upcoming;
         }
     }
 })
