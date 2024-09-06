@@ -4,13 +4,13 @@ import "react-multi-carousel/lib/styles.css";
 import { useSelector } from 'react-redux';
 import Badge from 'react-bootstrap/Badge';
 import Stack from 'react-bootstrap/Stack';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
   const [hoveredMovie, setHoveredMovie] = useState(null);
   const genreList = useSelector(state => state.movie.genreList)
   
-  const navi = useNavigate();
+  // const navi = useNavigate();
 
   console.log(genreList);
 
