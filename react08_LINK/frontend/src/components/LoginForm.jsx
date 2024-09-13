@@ -21,7 +21,16 @@ const LoginForm = () => {
         console.log(res.data);
 
         if(res.data.result==='success'){
-          navigate('/main')
+          alert("로그인 성공!")
+
+          // 로그인 성공 시, session Storge에 보관
+          // -> 객체를 문자열로 변환 필요 > JSON.stringify()
+
+          console.log(JSON.stringify(res.data));
+          sessionStorage.setItem("userInfo",JSON.stringify(res.data))
+          
+
+          // navigate('/')
         }else{
           alert("로그인 실패...")
           navigate('/login')

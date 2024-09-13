@@ -22,6 +22,7 @@ const JoinForm = () => {
     console.log(res.data);
 
     if(res.data.result==='success'){
+      alert("회원가입 성공!")
       navigate('/login')
     }else{
       alert("회원가입 실패!")
