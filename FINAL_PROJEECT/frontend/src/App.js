@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {Routes,Route} from 'react-router-dom'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Login from './pages/Login'
+import Join from './pages/Join'
+import Content from './components/Content';
+import { useState } from 'react';
 
 function App() {
+
+  const [nick, setNick] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header nick={nick} setNick={setNick}/>
+      <Routes>
+        <Route path='/' element={<Content/>}></Route>
+        <Route path='/login'element={<Login setNick={setNick}/>}></Route>
+        <Route path='/join' element={<Join/>}></Route>
+      </Routes>
+      <Footer/>
     </div>
   );
 }
